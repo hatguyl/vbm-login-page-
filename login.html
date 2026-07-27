@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login · College Event &amp; Hall Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- Global Header -->
+    <header class="app-header">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <div class="brand-mark">EH</div>
+        <div>
+          <h1>College Event &amp; Hall Management System</h1>
+          <div class="subtitle">Venue Booking &amp; Timeline Ledger</div>
+        </div>
+      </div>
+      <div class="clock">
+        <div id="clockDate">—</div>
+        <div id="clockTime">—</div>
+      </div>
+    </header>
+
+    <!-- Matched to .login-wrap in CSS -->
+    <main class="login-wrap">
+      <!-- Matched to .login-card in CSS -->
+      <div class="login-card">
+        <div class="login-plate" style="text-align: center; margin-bottom: 20px;">
+          <!-- Matched to .login-heading in CSS -->
+          <h2 class="login-heading">Sign In</h2>
+        </div>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <label for="fEmail">Email</label>
+          <input
+            type="email"
+            id="fEmail"
+            placeholder="departmentname@stpauls.com"
+            autocomplete="username"
+            required
+          />
+
+          <label for="fPassword">Password</label>
+          <div class="pw-wrap">
+            <input
+              type="password"
+              id="fPassword"
+              placeholder="Enter password"
+              autocomplete="current-password"
+              required
+            />
+            <button type="button" class="pw-toggle" id="pwToggleBtn">Show</button>
+          </div>
+
+          <!-- Matched to .remember-row in CSS -->
+          <label class="remember-row">
+            <input type="checkbox" id="fRemember" />
+            Remember me
+          </label>
+
+          <div id="loginError" class="login-error"></div>
+
+          <button type="submit" class="btn-primary" id="loginSubmitBtn">
+            Sign In
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      COLLEGE EVENT &amp; HALL MANAGEMENT SYSTEM 
+    </footer>
+
+    <div id="toast"></div>
+
+    <script src="login.js" defer></script>
+  </body>
+</html>

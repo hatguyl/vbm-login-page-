@@ -1,0 +1,171 @@
+/* login.css */
+
+.login-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  padding: 32px 16px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 28px -12px rgba(18, 21, 28, 0.35);
+}
+
+.login-heading {
+  font-family: "Fraunces", serif;
+  font-size: 26px;
+  color: var(--text-dark);
+  margin: 0;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label:not(.remember-row) {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-soft);
+  margin: 16px 0 6px;
+}
+
+.login-form label:first-of-type {
+  margin-top: 0;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  font-family: "Inter", sans-serif;
+  font-size: 13.5px;
+  background: var(--paper);
+  color: var(--text-dark);
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border-color: var(--brass);
+}
+
+/* Added styling to handle the Show Password button overlay */
+.pw-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pw-toggle {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-soft);
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+}
+.pw-toggle:hover {
+  color: var(--text-dark);
+}
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 18px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+
+.remember-row input {
+  accent-color: var(--brass);
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+
+.login-error {
+  display: none;
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-left: 3px solid var(--rust);
+  background: rgba(181, 72, 52, 0.1);
+  color: var(--rust);
+  font-size: 12.5px;
+}
+
+.login-error.show {
+  display: block;
+}
+
+.login-form .btn-primary {
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.login-form .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .login-wrap {
+    padding: 20px 14px;
+  }
+  .login-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 22px 18px;
+    border-radius: 8px;
+  }
+  .login-heading {
+    font-size: 22px;
+  }
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    padding: 12px 12px;
+    font-size: 16px; /* prevents iOS auto-zoom on focus */
+    min-height: 44px;
+  }
+  .pw-toggle {
+    right: 10px;
+    font-size: 10.5px;
+  }
+  .login-form .btn-primary {
+    min-height: 46px;
+    font-size: 15px;
+  }
+  .remember-row {
+    font-size: 13.5px;
+  }
+}
